@@ -16,7 +16,7 @@ public class UIController : MonoBehaviour {
 	}
 
 	void Start() {
-		_score = 0;
+		_score = 5;
 		scoreLabel.text = _score.ToString();
 
 		settingsPopup.Close();
