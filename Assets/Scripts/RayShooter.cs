@@ -5,14 +5,14 @@ using System.Collections;
 
 
 public class RayShooter : MonoBehaviour {
-	public Camera _camera;
+	private Camera _camera;
 
 	public Texture reticle;
 
 	void Start() {
-		//_camera = GetComponent<Camera>();
+		_camera = GetComponent<Camera>();
 
-        //Cursor.lockState = CursorLockMode.Locked;
+		//Cursor.lockState = CursorLockMode.Locked;
 		//Cursor.visible = false;
 	}
 

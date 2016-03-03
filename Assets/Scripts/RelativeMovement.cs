@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using System.Collections;
 
 [RequireComponent (typeof(CharacterController))]
@@ -11,12 +12,10 @@ public class RelativeMovement : MonoBehaviour
     public float moveSpeed = 6.0f;
     public float rotSpeed = 5.0f;
     private CharacterController _charController;
-    private Animator _animator;
 
     void Start()
     {
        _charController = GetComponent<CharacterController>();
-       _animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -41,13 +40,8 @@ public class RelativeMovement : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, direction, rotSpeed * Time.deltaTime);
         }
 
-      //  _animator.SetFloat("Speed", movement.sqrMagnitude);
-
-
-        
-
-
         movement *= Time.deltaTime;
         _charController.Move(movement);
     }
+
 }

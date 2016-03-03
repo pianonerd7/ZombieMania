@@ -16,7 +16,7 @@ public class UIController : MonoBehaviour {
 	}
 
 	void Start() {
-		_score = 5;
+		_score = 0;
 		scoreLabel.text = _score.ToString();
 
 		settingsPopup.Close();
@@ -24,6 +24,7 @@ public class UIController : MonoBehaviour {
 
 	private void OnEnemyHit() {
 		_score += 1;
+        Utility.didKillEnemy = true;
 		scoreLabel.text = _score.ToString();
 	}
 
