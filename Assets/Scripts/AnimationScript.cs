@@ -34,24 +34,33 @@ public class AnimationScript : MonoBehaviour
             _animator.SetBool("isDead", false);
         }
 
-        //if (Input.GetKey(KeyCode.UpArrow))
-        //{
-        //    _animator.SetBool("isIdle", false);
-        //    _animator.SetBool("isRunning", true);
-        //    _animator.SetBool("isJumping", false);
-        //    _animator.SetBool("isVictory", false);
-        //    _animator.SetBool("isDead", false);
-        //}
+        else if (Utility.isWon)
+        {
+            _animator.SetBool("isIdle", false);
+            _animator.SetBool("isRunning", false);
+            _animator.SetBool("isJumping", false);
+            _animator.SetBool("isVictory", true);
+            _animator.SetBool("isDead", false);
+        }
 
-        //if (Utility.didKillEnemy)
-        //{
-        //    Utility.didKillEnemy = false;
-        //    _animator.SetBool("isIdle", false);
-        //    _animator.SetBool("isRunning", false);
-        //    _animator.SetBool("isJumping", true);
-        //    _animator.SetBool("isVictory", false);
-        //    _animator.SetBool("isDead", false);
-        //}
+        else if (Utility.isDead)
+        {
+            _animator.SetBool("isIdle", false);
+            _animator.SetBool("isRunning", false);
+            _animator.SetBool("isJumping", false);
+            _animator.SetBool("isVictory", false);
+            _animator.SetBool("isDead", true);
+        }
+
+        else if (Utility.didKillEnemy)
+        {
+            Utility.didKillEnemy = false;
+            _animator.SetBool("isIdle", false);
+            _animator.SetBool("isRunning", false);
+            _animator.SetBool("isJumping", true);
+            _animator.SetBool("isVictory", false);
+            _animator.SetBool("isDead", false);
+        }
 
         else
         {
