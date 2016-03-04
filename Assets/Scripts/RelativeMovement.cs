@@ -42,6 +42,6 @@ public class RelativeMovement : MonoBehaviour
 
         movement *= Time.deltaTime;
         _charController.Move(movement);
-    }
 
+    }
 }

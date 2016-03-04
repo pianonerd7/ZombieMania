@@ -6,6 +6,7 @@ public class UIController : MonoBehaviour {
 	[SerializeField] private Text scoreLabel;
 	[SerializeField] private SettingsPopup settingsPopup;
 
+
 	private int _score;
 
 	void Awake() {
@@ -24,13 +25,7 @@ public class UIController : MonoBehaviour {
 
 	private void OnEnemyHit() {
 		_score += 1;
-        Utility.didKillEnemy = true;
-        Utility.numKilledEnemy++;
 
-        if (Utility.numEnemies == Utility.numKilledEnemy)
-        {
-            Utility.isWon = true;
-        }
 		scoreLabel.text = _score.ToString();
 	}
 

@@ -7,7 +7,7 @@ public class SceneController : MonoBehaviour {
 
     void Start()
     {
-        for (int i = 0; i < Utility.numEnemies; i++)
+        for (int i = 0; i < Utility.spawnEnemies; i++)
         {
             _enemy = Instantiate(enemyPrefab) as GameObject;
             _enemy.transform.position = new Vector3(5, 0, 10);
@@ -16,7 +16,7 @@ public class SceneController : MonoBehaviour {
             _enemy.GetComponent<WanderingAI>().SetAlive(true);
         }
 
-        for (int i = 0; i < Utility.numEnemies; i++)
+        for (int i = 0; i < Utility.spawnEnemies; i++)
         {
             _enemy = Instantiate(enemyPrefab) as GameObject;
             _enemy.transform.position = new Vector3(-3, 0, 0);
@@ -26,7 +26,7 @@ public class SceneController : MonoBehaviour {
         }
 
 
-        for (int i = 0; i < Utility.numEnemies; i++)
+        for (int i = 0; i < Utility.spawnEnemies; i++)
         {
             _enemy = Instantiate(enemyPrefab) as GameObject;
             _enemy.transform.position = new Vector3(15, 0, 10);
@@ -35,7 +35,7 @@ public class SceneController : MonoBehaviour {
             _enemy.GetComponent<WanderingAI>().SetAlive(true);
         }
 
-        for (int i = 0; i < Utility.numEnemies; i++)
+        for (int i = 0; i < Utility.spawnEnemies; i++)
         {
             _enemy = Instantiate(enemyPrefab) as GameObject;
             _enemy.transform.position = new Vector3(15, 0, 10);
@@ -44,7 +44,7 @@ public class SceneController : MonoBehaviour {
             _enemy.GetComponent<WanderingAI>().SetAlive(true);
         }
 
-        for (int i = 0; i < Utility.numEnemies; i++)
+        for (int i = 0; i < Utility.spawnEnemies; i++)
         {
             _enemy = Instantiate(enemyPrefab) as GameObject;
             _enemy.transform.position = new Vector3(-15, 0, 5);
@@ -54,7 +54,7 @@ public class SceneController : MonoBehaviour {
         }
 
 
-        for (int i = 0; i < Utility.numEnemies; i++)
+        for (int i = 0; i < Utility.spawnEnemies; i++)
         {
             _enemy = Instantiate(enemyPrefab) as GameObject;
             _enemy.transform.position = new Vector3(-10, 0, 20);
@@ -63,7 +63,7 @@ public class SceneController : MonoBehaviour {
             _enemy.GetComponent<WanderingAI>().SetAlive(true);
         }
 
-        for (int i = 0; i < Utility.numEnemies; i++)
+        for (int i = 0; i < Utility.spawnEnemies; i++)
         {
             _enemy = Instantiate(enemyPrefab) as GameObject;
             _enemy.transform.position = new Vector3(4, 0, -20);
